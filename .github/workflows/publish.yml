@@ -27,7 +27,7 @@ jobs:
         npm --prefix ../designer run build -- "${PWD##*/}"
     - name: Meta
       run: |
-        cat <<EOF >> ../designer/dist/index.html
+        cat <<html\> >> ../designer/dist/index.html
           <!doctype html>
           <html>
             <head>
@@ -37,7 +37,6 @@ jobs:
               <p>Design a00001 version <strong>${{ github.sha }}</strong>. Preview <a href="https://i.rathnas.com/?iid=demo&preview=a00001">https://i.rathnas.com/?iid=demo&preview=a00001</a></p>
             </body>
           </html>
-          EOF
     - name: Deploy
       uses: crazy-max/ghaction-github-pages@v1.2.2
       if: success()
