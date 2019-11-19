@@ -39,7 +39,7 @@ jobs:
           </html>
     - name: Meta TXT
       run: |
-        echo "${{ github.sha }}" >> version.txt
+        echo "${{ github.sha }}" >> ../designer/dist/version.txt
     - name: Deploy
       uses: crazy-max/ghaction-github-pages@v1.2.2
       if: success()
