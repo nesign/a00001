@@ -37,6 +37,9 @@ jobs:
               <p>Design a00001 version <strong>${{ github.sha }}</strong>. Preview <a href="https://i.rathnas.com/?iid=demo&preview=a00001">https://i.rathnas.com/?iid=demo&preview=a00001</a></p>
             </body>
           </html>
+    - name: Meta TXT
+      run: |
+        echo "${{ github.sha }}" >> version.txt
     - name: Deploy
       uses: crazy-max/ghaction-github-pages@v1.2.2
       if: success()
