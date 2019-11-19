@@ -21,7 +21,7 @@ jobs:
     - name: Dependencies
       run: |
         npm --prefix ../designer ci
-        npm ci --if-present
+        npm i --if-present
     - name: Build
       run: |
         npm --prefix ../designer run build -- "${PWD##*/}"
