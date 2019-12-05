@@ -64,10 +64,12 @@
         {{#each sliderPhotos}}
         <div class="carousel-item {{# if @first}}active{{/if}}">
           <img class="d-block w-100" src="{{url}}" alt="{{title}}">
+          {{# if title}}
           <div class="carousel-caption d-none d-md-block bg-light text-dark comforta">
             <h5>{{title}}</h5>
             <p>{{description}}</p>
           </div>
+          {{/if}}
         </div>
         {{/each}}
       </div>
