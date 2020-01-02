@@ -99,7 +99,7 @@
         <div class="card text-white bg-dark">
           <div class="card-body">
             <h5 class="card-title">Time</h5>
-            <p class="card-text">{{invite.timeFromString}} - {{endsat invite}}</p>
+            <p class="card-text">{{invite.timeFromString}} {{# if invite.timeTo}} - {{endsat invite}} {{/if}}</p>
           </div>
         </div>
       </div>
