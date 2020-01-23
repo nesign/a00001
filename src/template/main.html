@@ -3,15 +3,15 @@
   {{#if guest}}
   <section class="guest mb-4">
     <div class="guest-container d-flex justify-content-center text-muted text-small text-dark bg-none">
-      <span class="guest-name">{{guest.name}},</span>
+      <span class="guest-name" id="guestName">{{guest.name}},</span>
     </div>
   </section>
   {{/if}}
 
   <section class="main">
-    <div class="jumbotron bg-white p-0">
-      <h1 class="pacifico display-1 text-center mb-5">{{invite.title}}</h1>
-      <div class="roboto lead text-center">{{invite.shortMsg}}</div>
+    <div class="jumbotron p-0" id="titleJumbotron">
+      <h1 class="display-1 text-center mb-5" id="title">{{invite.title}}</h1>
+      <div class="lead text-center" id="shortMsg">{{invite.shortMsg}}</div>
     </div>
     {{#if mainPhoto}}
     <div class="card mb-3">
@@ -21,7 +21,7 @@
           allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       {{else}}
-      <img class="card-img-top" src="{{mainPhoto.url}}" alt="{{mainPhoto.title}}">
+      <img class="card-img-top" src="{{mainPhoto.url}}" alt="{{mainPhoto.title}}" id="mainPhoto">
       {{/if}}
     </div>
     {{/if}}
@@ -30,7 +30,7 @@
 
   {{#if longMsg}}
   <section class="long-msg my-5 py-5 shadow">
-    <div class="long-msg text-center chilanka">
+    <div class="long-msg text-center" id="longMsg">
       {{{longMsg}}}
     </div>
   </section>
@@ -51,9 +51,9 @@
       <div class="carousel-inner">
         {{#each sliderPhotos}}
         <div class="carousel-item {{# if @first}}active{{/if}}">
-          <img class="d-block w-100" src="{{url}}" alt="{{title}}">
+          <img class="d-block w-100 sliderPhoto" src="{{url}}" alt="{{title}}">
           {{# if title}}
-          <div class="carousel-caption d-none d-md-block bg-light text-dark comforta">
+          <div class="carousel-caption d-none d-md-block bg-light text-dark">
             <h5>{{title}}</h5>
             <p>{{description}}</p>
           </div>
@@ -76,21 +76,23 @@
   <section class="details mt-5 small">
     <div class="row">
       <div class="col-12 col-md-6">
-        <div class="card">
+        <div class="card" id="addrTextCard">
           <div class="card-body">
-            <h5 class="card-title">Venue</h5>
-            <p class="card-text">{{invite.addrText}}</p>
+            <h5 class="card-title" id="addrTextTitle">Venue</h5>
+            <p class="card-text" id="addrText">{{invite.addrText}}</p>
           </div>
         </div>
       </div>
       <div class="col-12 col-md-6 mt-2 mt-md-0">
-        <div class="card">
+        <div class="card" id="timeCard">
           <div class="card-body">
-            <h5 class="card-title">Time</h5>
-            <p class="card-text">{{invite.timeFromString}} {{# if invite.timeTo}} - {{endsat invite}} {{/if}}</p>
+            <h5 class="card-title" id="timeTitle">Time</h5>
+            <p class="card-text" id="time">{{invite.timeFromString}} {{# if invite.timeTo}} - {{endsat invite}} {{/if}}
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <div class="bg" id="inviteBackground"></div>
 </div>
