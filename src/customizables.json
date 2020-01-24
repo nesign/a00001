@@ -105,7 +105,8 @@
     "title": {
       "font-family": "",
       "font-size": "",
-      "font-weight": ""
+      "font-weight": "",
+      "color": ""
     },
     "shortMsg": {
       "font-family": "",
@@ -123,12 +124,14 @@
     "addrTextTitle": {
       "font-family": "",
       "font-size": "",
-      "font-weight": ""
+      "font-weight": "",
+      "color": ""
     },
     "addrText": {
       "font-family": "",
       "font-size": "",
-      "font-weight": ""
+      "font-weight": "",
+      "color": ""
     },
     "timeCard": {
       "background": ""
@@ -136,12 +139,14 @@
     "timeTitle": {
       "font-family": "",
       "font-size": "",
-      "font-weight": ""
+      "font-weight": "",
+      "color": ""
     },
     "time": {
       "font-family": "",
       "font-size": "",
-      "font-weight": ""
+      "font-weight": "",
+      "color": ""
     },
     "inviteBackground": {
       "bgStyle": ""
