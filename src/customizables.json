@@ -1,73 +1,73 @@
 {
   "consts": {
-    "font": {
-      "family": [
-        "Pacifico",
-        "Roboto",
-        "Chilanka",
-        "Comfortaa",
-        "Alegreya",
-        "B612",
-        "Muli",
-        "Titillium Web",
-        "Varela",
-        "Vollkorn",
-        "IBM Plex",
-        "Crimson Text",
-        "Cairo",
-        "BioRhyme",
-        "Karla",
-        "Lora",
-        "Frank Ruhl Libre",
-        "Playfair Display",
-        "Archivo",
-        "Spectral",
-        "Fjalla One",
-        "Montserrat",
-        "Rubik",
-        "Source Sans",
-        "Cardo",
-        "Cormorant",
-        "Work Sans",
-        "Rakkas",
-        "Concert One",
-        "Yatra One",
-        "Arvo",
-        "Lato",
-        "Abril FatFace",
-        "Ubuntu",
-        "PT Serif",
-        "Old Standard TT",
-        "Oswald",
-        "Nunito",
-        "Oxygen",
-        "Poppins"
-      ],
-      "size": [
-        "xx-small",
-        "x-small",
-        "small",
-        "medium",
-        "large",
-        "x-large",
-        "xx-large"
-      ],
-      "weight": [
-        "normal",
-        "bold",
-        "bolder",
-        "lighter",
-        "100",
-        "200",
-        "300",
-        "400",
-        "500",
-        "600",
-        "700",
-        "800",
-        "900"
-      ]
-    },
+    "font-family": [
+      "Pacifico",
+      "Roboto",
+      "Chilanka",
+      "Comfortaa",
+      "Alegreya",
+      "B612",
+      "Muli",
+      "Titillium Web",
+      "Varela",
+      "Vollkorn",
+      "IBM Plex",
+      "Crimson Text",
+      "Cairo",
+      "BioRhyme",
+      "Karla",
+      "Lora",
+      "Frank Ruhl Libre",
+      "Playfair Display",
+      "Archivo",
+      "Spectral",
+      "Fjalla One",
+      "Montserrat",
+      "Rubik",
+      "Source Sans",
+      "Cardo",
+      "Cormorant",
+      "Work Sans",
+      "Rakkas",
+      "Concert One",
+      "Yatra One",
+      "Arvo",
+      "Lato",
+      "Abril FatFace",
+      "Ubuntu",
+      "PT Serif",
+      "Old Standard TT",
+      "Oswald",
+      "Nunito",
+      "Oxygen",
+      "Poppins"
+    ],
+    "font-size": [
+      "9px",
+      "10px",
+      "12px",
+      "16px",
+      "24px",
+      "36px",
+      "48px",
+      "60px",
+      "72px"
+    ],
+    "font-weight": [
+      "normal",
+      "bold",
+      "bolder",
+      "lighter",
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
     "background": {
       "none": {
         "name": "Clear",
@@ -95,69 +95,53 @@
   },
   "customizables": {
     "guestName": {
-      "font": {
-        "family": "",
-        "size": "",
-        "weight": ""
-      }
+      "font-family": "",
+      "font-size": "",
+      "font-weight": ""
     },
     "titleJumbotron": {
       "background": ""
     },
     "title": {
-      "font": {
-        "family": "",
-        "size": "",
-        "weight": ""
-      }
+      "font-family": "",
+      "font-size": "",
+      "font-weight": ""
     },
     "shortMsg": {
-      "font": {
-        "family": "",
-        "size": "",
-        "weight": ""
-      }
+      "font-family": "",
+      "font-size": "",
+      "font-weight": ""
     },
     "longMsg": {
-      "font": {
-        "family": "",
-        "size": ""
-      },
+      "font-family": "",
+      "font-size": "",
       "background": ""
     },
     "addrTextCard": {
       "background": ""
     },
     "addrTextTitle": {
-      "font": {
-        "family": "",
-        "size": "",
-        "weight": ""
-      }
+      "font-family": "",
+      "font-size": "",
+      "font-weight": ""
     },
     "addrText": {
-      "font": {
-        "family": "",
-        "size": "",
-        "weight": ""
-      }
+      "font-family": "",
+      "font-size": "",
+      "font-weight": ""
     },
     "timeCard": {
       "background": ""
     },
     "timeTitle": {
-      "font": {
-        "family": "",
-        "size": "",
-        "weight": ""
-      }
+      "font-family": "",
+      "font-size": "",
+      "font-weight": ""
     },
     "time": {
-      "font": {
-        "family": "",
-        "size": "",
-        "weight": ""
-      }
+      "font-family": "",
+      "font-size": "",
+      "font-weight": ""
     },
     "inviteBackground": {
       "bgStyle": ""
