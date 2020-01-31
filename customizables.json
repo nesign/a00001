@@ -92,7 +92,7 @@
         "style": "background: {{color}};"
       }
     },
-    "bgStyles": [
+    "_bgStyles": [
       "0P0IwJfdBkNEQBrZKNWQ",
       "3vnh7ACfHGkg9lVdWs1b",
       "iMvOuiL1kqDzObHQHQN1",
@@ -155,7 +155,7 @@
       "color": ""
     },
     "inviteBackground": {
-      "bgStyle": ""
+      "_bgStyle": ""
     }
   }
 }
