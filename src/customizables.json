@@ -51,7 +51,13 @@
       "36px",
       "48px",
       "60px",
-      "72px"
+      "72px",
+      "1rem",
+      "2rem",
+      "3rem",
+      "4rem",
+      "5rem",
+      "6rem"
     ],
     "font-weight": [
       "normal",
