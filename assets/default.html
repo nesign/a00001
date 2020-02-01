@@ -1,100 +1,98 @@
 <head></head><!-- Custom template goes here -->
 <div class="py-3 container fade-in">
-  <div class="inviteBody" id="inviteBody">
-    {{#if guest}}
-    <section class="guest mb-4">
-      <div class="guest-container d-flex justify-content-center text-muted text-small text-dark bg-none">
-        <span class="guest-name" id="guestName">{{guest.name}},</span>
-      </div>
-    </section>
-    {{/if}}
+  {{#if guest}}
+  <section class="guest mb-4">
+    <div class="guest-container d-flex justify-content-center text-muted text-small text-dark bg-none">
+      <span class="guest-name" id="guestName">{{guest.name}},</span>
+    </div>
+  </section>
+  {{/if}}
 
-    <section class="main">
-      <div class="jumbotron p-0" id="titleJumbotron">
-        <h1 class="display-1 text-center mb-5 pt-4" id="title">{{invite.title}}</h1>
-        <div class="lead text-center" id="shortMsg">{{invite.shortMsg}}</div>
+  <section class="main">
+    <div class="jumbotron p-0" id="titleJumbotron">
+      <h1 class="display-1 text-center mb-5 pt-4" id="title">{{invite.title}}</h1>
+      <div class="lead text-center" id="shortMsg">{{invite.shortMsg}}</div>
+    </div>
+    {{#if mainPhoto}}
+    <div class="card mb-3">
+      {{#if isVideoInvite}}
+      <div class="p-md-5 d-flex justify-content-center align-items-center">
+        <iframe class="embed-responsive-item" width="560" height="315" src="{{mainPhoto.url}}"
+          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-      {{#if mainPhoto}}
-      <div class="card mb-3">
-        {{#if isVideoInvite}}
-        <div class="p-md-5 d-flex justify-content-center align-items-center">
-          <iframe class="embed-responsive-item" width="560" height="315" src="{{mainPhoto.url}}"
-            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        {{else}}
-        <img class="card-img-top" src="{{mainPhoto.url}}" alt="{{mainPhoto.title}}" id="mainPhoto">
-        {{/if}}
-      </div>
+      {{else}}
+      <img class="card-img-top" src="{{mainPhoto.url}}" alt="{{mainPhoto.title}}" id="mainPhoto">
       {{/if}}
-    </section>
-
-
-    {{#if longMsg}}
-    <section class="long-msg my-5 py-5 shadow">
-      <div class="long-msg text-center" id="longMsg">
-        {{{longMsg}}}
-      </div>
-    </section>
+    </div>
     {{/if}}
+  </section>
 
-    {{#if sliderPhotos}}
-    <section class="slider">
-      <div id="carousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          {{#each sliderPhotos}}
-          {{# if @first}}
-          <li data-target="#carousel" data-slide-to="{{@index}}" class="active"></li>
-          {{else}}
-          <li data-target="#carousel" data-slide-to="{{@index}}"></li>
+
+  {{#if longMsg}}
+  <section class="long-msg my-5 py-5 shadow">
+    <div class="long-msg text-center" id="longMsg">
+      {{{longMsg}}}
+    </div>
+  </section>
+  {{/if}}
+
+  {{#if sliderPhotos}}
+  <section class="slider">
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        {{#each sliderPhotos}}
+        {{# if @first}}
+        <li data-target="#carousel" data-slide-to="{{@index}}" class="active"></li>
+        {{else}}
+        <li data-target="#carousel" data-slide-to="{{@index}}"></li>
+        {{/if}}
+        {{/each}}
+      </ol>
+      <div class="carousel-inner">
+        {{#each sliderPhotos}}
+        <div class="carousel-item {{# if @first}}active{{/if}}">
+          <img class="d-block w-100 sliderPhoto" src="{{url}}" alt="{{title}}">
+          {{# if title}}
+          <div class="carousel-caption d-none d-md-block bg-light text-dark">
+            <h5>{{title}}</h5>
+            <p>{{description}}</p>
+          </div>
           {{/if}}
-          {{/each}}
-        </ol>
-        <div class="carousel-inner">
-          {{#each sliderPhotos}}
-          <div class="carousel-item {{# if @first}}active{{/if}}">
-            <img class="d-block w-100 sliderPhoto" src="{{url}}" alt="{{title}}">
-            {{# if title}}
-            <div class="carousel-caption d-none d-md-block bg-light text-dark">
-              <h5>{{title}}</h5>
-              <p>{{description}}</p>
-            </div>
-            {{/if}}
-          </div>
-          {{/each}}
         </div>
-        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+        {{/each}}
       </div>
-    </section>
-    {{/if}}
+      <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+  {{/if}}
 
-    <section class="details mt-5 small">
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <div class="card" id="addrTextCard">
-            <div class="card-body">
-              <h5 class="card-title" id="addrTextTitle">Venue</h5>
-              <p class="card-text" id="addrText">{{invite.addrText}}</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 mt-2 mt-md-0">
-          <div class="card" id="timeCard">
-            <div class="card-body">
-              <h5 class="card-title" id="timeTitle">Time</h5>
-              <p class="card-text" id="time">{{invite.timeFromString}} {{# if invite.timeTo}} - {{endsat invite}} {{/if}}
-              </p>
-            </div>
+  <section class="details mt-5 small">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="card" id="addrTextCard">
+          <div class="card-body">
+            <h5 class="card-title" id="addrTextTitle">Venue</h5>
+            <p class="card-text" id="addrText">{{invite.addrText}}</p>
           </div>
         </div>
       </div>
-    </section>
-  </div>
+      <div class="col-12 col-md-6 mt-2 mt-md-0">
+        <div class="card" id="timeCard">
+          <div class="card-body">
+            <h5 class="card-title" id="timeTitle">Time</h5>
+            <p class="card-text" id="time">{{invite.timeFromString}} {{# if invite.timeTo}} - {{endsat invite}} {{/if}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <div class="bg" id="inviteBackground"></div>
 </div>
